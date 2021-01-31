@@ -1,0 +1,10 @@
+
+i {
+    color: red;
+}
+
+.dropdown-trigger{
+    white-space: nowrap;
+    border: solid 1px grey;
+    background-color: rgb(251, 255, 0);  
+}

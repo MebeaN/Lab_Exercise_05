@@ -10,6 +10,10 @@ const taskList = document.querySelector('.collection');          //The ul
 
 const clearBtn = document.querySelector('.clear-tasks');      //the all task clear button
 
+const dd = document.querySelectorAll(".dropdown-trigger")
+
+
+
 // Add Event Listener  [Form , clearBtn and filter search input ]
 
 // form submit 
@@ -21,10 +25,12 @@ clearBtn.addEventListener('click', clearAllTasks);
 //   Filter Task 
 filter.addEventListener('keyup', filterTasks);
 
+//dd.addEventListener("click", dropdown)
+
 // Add New  Task Function definition 
 function addNewTask(e) {
     if (taskInput.value === '') 
-    {
+    { 
         taskInput.style.borderColor = "red";
         return;
 
@@ -61,9 +67,7 @@ function removeTask(e) {
         {
             e.target.parentElement.parentElement.remove();
         }
-
     }
-
 }
 
 // Clear Task Function definition 
@@ -81,15 +85,25 @@ function clearAllTasks() {
 
 // Filter tasks function definition 
 function filterTasks(e) {
-
-    console.log("Task Filter ...");
-
+    
+    
+    const inp = filter.value.toLowerCase();
+    const ul = document.getElementById("lists")
+    const li = ul.getElementsByTagName("li")
+    for(var i = 0; i < li.length; i++){
+        var x = li[i].firstChild
+        var a = x.textContent.toLowerCase();
+        if(a.indexOf(inp) > -1){
+            li[i].style.display = ""
+        }
+        else{
+            li[i].style.display = "none"
+        }
+    }
 }
 
 const reloadIcon = document.querySelector('.fa');   
 
-// Event Listener for reload 
-reloadIcon.addEventListener('click', reloadPage);
 
 // Reload Page Function 
 function reloadPage() {
@@ -97,3 +111,19 @@ function reloadPage() {
     location.reload();
 }
 
+// Event Listener for reload 
+reloadIcon.addEventListener('click', reloadPage);
+
+var dropdowns = document.querySelectorAll('.dropdown-trigger')
+for (var i = 0; i < dropdowns.length; i++){
+    M.Dropdown.init(dropdowns[i]);
+}
+
+function dropdown(e){
+    if(e.getElementById("ascend")){
+        alert("Ascending")
+    }
+    else{
+        alert("Descending")
+    }
+}

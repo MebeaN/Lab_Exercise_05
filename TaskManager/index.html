@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Materialize Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Font Owesome Compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <link rel="shortcut icon" type="image/svg" href="assets/img/tasks-solid.svg" />
+    <!-- <link rel="shortcut icon" type="image/svg" href="assets/img/tasks-solid.svg" /> -->
     <title>Task List App</title>
 </head>
 
 <body>
-
-
 
     <!-- Navigation  -->
     <nav>
@@ -57,11 +61,13 @@
                 </div>
                 <div class="card-action">
                     <h5 id="task-title">List of Tasks</h5>
+                    
                     <div class="input-field col s12">
                         <input type="search" name="filter" id="filter">
                         <label for="filter">Search</label>
-                    </div>
-                    <ul class="collection">
+                        
+                    </div>                      
+                    <ul class="collection" id="lists">
                         <!-- Here is the task list goes  -->
                     </ul>
                     <a href="#" class="clear-tasks btn red">Clear All Task</a>
