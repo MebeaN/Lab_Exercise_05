@@ -4,7 +4,7 @@ i {
 }
 
 .dropdown-trigger{
-    white-space: nowrap;
+    margin-top: 1%;
     border: solid 1px grey;
-    background-color: rgb(251, 255, 0);  
+    background-color: rgb(1, 60, 255);  
 }

@@ -10,8 +10,7 @@ const taskList = document.querySelector('.collection');          //The ul
 
 const clearBtn = document.querySelector('.clear-tasks');      //the all task clear button
 
-const dd = document.querySelectorAll(".dropdown-trigger")
-
+const dd = document.getElementById("dropdown")
 
 
 // Add Event Listener  [Form , clearBtn and filter search input ]
@@ -119,11 +118,8 @@ for (var i = 0; i < dropdowns.length; i++){
     M.Dropdown.init(dropdowns[i]);
 }
 
-function dropdown(e){
+function dropdown(){
     if(e.getElementById("ascend")){
-        alert("Ascending")
-    }
-    else{
-        alert("Descending")
+        taskList.children.sort()
     }
 }
